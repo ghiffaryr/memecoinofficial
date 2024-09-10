@@ -1,4 +1,10 @@
-/* Basic Styles */
+/* General mobile adjustments */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  /* Prevent padding/margin from affecting element size */
+}
+
 body {
     font-family: 'Comic Sans MS', sans-serif;
     background: linear-gradient(45deg, #f9c74f, #f3722c, #f8961e);
@@ -6,18 +12,15 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
-    overflow-x: hidden;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
+    width: 100%;  /* Ensure body takes up full width */
 }
 
 header {
     padding: 100px 20px;
     background: url('assets/hero-banner.png') no-repeat center center / cover;
     color: #fff;
-}
-
-.logo {
-    width: 150px;
-    animation: float 3s ease-in-out infinite;
+    width: 100%;  /* Ensure header takes full width */
 }
 
 h1 {
@@ -39,20 +42,20 @@ p {
     font-size: 1.2em;
     transition: background-color 0.3s ease;
     cursor: pointer;
-}
-
-.cta-button:hover {
-    background-color: #2ecc71;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 #tokenomics {
     padding: 50px 20px;
     background: linear-gradient(90deg, #6a0572, #be79df);
+    width: 100%;  /* Ensure section takes full width */
 }
 
 .stat-item {
     margin: 20px;
     color: #fff;
+    width: 100%;  /* Ensure the stat items adjust to fit on mobile */
 }
 
 .interactive-button {
@@ -65,13 +68,10 @@ p {
     cursor: pointer;
 }
 
-.interactive-button:hover {
-    transform: scale(1.1);
-}
-
 #interactive {
     padding: 50px 20px;
     background: linear-gradient(90deg, #457b9d, #1d3557);
+    width: 100%;  /* Ensure section takes full width */
 }
 
 footer {
@@ -80,28 +80,10 @@ footer {
     color: #fff;
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: 100%;  /* Ensure footer takes full width */
 }
 
-.social-links a {
-    margin: 0 15px;
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.social-links a:hover {
-    color: #f1c40f;
-}
-
-/* Floating Animation */
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-}
-
-/* Media Queries for Mobile Devices */
+/* Media Queries for Mobile */
 @media (max-width: 768px) {
     h1 {
         font-size: 2.5em;
@@ -123,6 +105,7 @@ footer {
 
     .stat-item {
         margin: 15px;
+        width: 100%;  /* Stat items should fill full width on mobile */
     }
 
     .interactive-button {
