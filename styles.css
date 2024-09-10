@@ -1,56 +1,100 @@
 body {
     font-family: 'Comic Sans MS', sans-serif;
-    background: linear-gradient(45deg, #f39c12, #e74c3c);
-    color: white;
+    background: linear-gradient(45deg, #f9c74f, #f3722c, #f8961e);
+    color: #fff;
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow-x: hidden;
 }
 
 header {
     padding: 100px 20px;
-    background: #2c3e50;
-    color: white;
+    background: url('assets/hero-banner.png') no-repeat center center / cover;
+    color: #fff;
 }
 
-button {
-    padding: 10px 20px;
+.logo {
+    width: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    padding: 15px 30px;
     background-color: #27ae60;
-    color: white;
+    color: #fff;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    border-radius: 50px;
     font-size: 1.2em;
     transition: background-color 0.3s ease;
+    cursor: pointer;
 }
 
-button:hover {
+.cta-button:hover {
     background-color: #2ecc71;
 }
 
-#tokenomics, #interactive {
+#tokenomics {
     padding: 50px 20px;
-    background: #3498db;
+    background: linear-gradient(90deg, #6a0572, #be79df);
 }
 
 .stat-item {
     margin: 20px;
+    color: #fff;
+}
+
+.interactive-button {
+    padding: 15px 30px;
+    background-color: #f9c74f;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.5em;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.interactive-button:hover {
+    transform: scale(1.1);
+}
+
+#interactive {
+    padding: 50px 20px;
+    background: linear-gradient(90deg, #457b9d, #1d3557);
 }
 
 footer {
-    background: #34495e;
+    background: #2d3436;
     padding: 20px;
-    position: absolute;
+    color: #fff;
+    position: relative;
     bottom: 0;
     width: 100%;
 }
 
 .social-links a {
     margin: 0 15px;
-    color: white;
+    color: #fff;
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
     color: #f1c40f;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
