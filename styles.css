@@ -1,3 +1,4 @@
+/* Basic Styles */
 body {
     font-family: 'Comic Sans MS', sans-serif;
     background: linear-gradient(45deg, #f9c74f, #f3722c, #f8961e);
@@ -93,8 +94,80 @@ footer {
     color: #f1c40f;
 }
 
+/* Floating Animation */
 @keyframes float {
     0% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
     100% { transform: translateY(0px); }
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    p {
+        font-size: 1em;
+        margin-bottom: 30px;
+    }
+
+    .cta-button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+
+    #tokenomics {
+        padding: 40px 15px;
+    }
+
+    .stat-item {
+        margin: 15px;
+    }
+
+    .interactive-button {
+        padding: 12px 25px;
+        font-size: 1.2em;
+    }
+
+    #interactive {
+        padding: 40px 15px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 0.9em;
+        margin-bottom: 20px;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .interactive-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    #tokenomics, #interactive {
+        padding: 30px 10px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    .social-links a {
+        margin: 0 10px;
+    }
 }
