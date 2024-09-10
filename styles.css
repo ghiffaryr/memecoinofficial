@@ -1,156 +1,159 @@
-/* General mobile adjustments */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;  /* Prevent padding/margin from affecting element size */
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Comic Sans MS', sans-serif;
-    background: linear-gradient(45deg, #f9c74f, #f3722c, #f8961e);
-    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
     margin: 0;
-    padding: 0;
-    text-align: center;
-    overflow-x: hidden;  /* Prevent horizontal scrolling */
-    width: 100%;  /* Ensure body takes up full width */
+    overflow-x: hidden; /* Prevents horizontal scrolling */
 }
 
 header {
     padding: 100px 20px;
     background: url('assets/hero-banner.png') no-repeat center center / cover;
     color: #fff;
-    width: 100%;  /* Ensure header takes full width */
 }
 
-h1 {
-    font-size: 3em;
+.logo {
+    width: 150px;
+    animation: float 3s ease-in-out infinite;
+}
+
+h1, h2 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+#hero {
+    background-color: #00aaff;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: 200px; /* Adjust the width for mobile */
 }
 
 .cta-button {
-    padding: 15px 30px;
-    background-color: #27ae60;
-    color: #fff;
+    background-color: #ff8800;
+    color: white;
     border: none;
-    border-radius: 50px;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease;
+    padding: 15px 30px;
+    font-size: 18px;
     cursor: pointer;
-    touch-action: manipulation;
-    -webkit-tap-highlight-color: transparent;
+    margin-top: 20px;
+    border-radius: 50px;
 }
 
+.cta-button:hover {
+    background-color: #ff6600;
+}
+
+/* Tokenomics Section */
 #tokenomics {
-    padding: 50px 20px;
-    background: linear-gradient(90deg, #6a0572, #be79df);
-    width: 100%;  /* Ensure section takes full width */
+    padding: 60px 20px;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+.stats {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .stat-item {
-    margin: 20px;
-    color: #fff;
-    width: 100%;  /* Ensure the stat items adjust to fit on mobile */
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Interactive Section */
+#interactive {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
 }
 
 .interactive-button {
     padding: 15px 30px;
-    background-color: #f9c74f;
+    font-size: 18px;
+    background-color: #ff8800;
+    color: white;
     border: none;
     border-radius: 50px;
-    font-size: 1.5em;
-    transition: transform 0.2s;
     cursor: pointer;
+    margin-top: 20px;
 }
 
-#interactive {
-    padding: 50px 20px;
-    background: linear-gradient(90deg, #457b9d, #1d3557);
-    width: 100%;  /* Ensure section takes full width */
+.interactive-button:hover {
+    background-color: #ff6600;
 }
 
+#coin-counter {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* Footer */
 footer {
-    background: #2d3436;
-    padding: 20px;
+    background-color: #333;
     color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;  /* Ensure footer takes full width */
+    padding: 20px;
+    text-align: center;
 }
 
-/* Media Queries for Mobile */
+.social-links a {
+    color: #00aaff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5em;
-    }
-
-    p {
-        font-size: 1em;
-        margin-bottom: 30px;
-    }
-
-    .cta-button {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-
-    #tokenomics {
-        padding: 40px 15px;
+    .cta-button, .interactive-button {
+        padding: 10px 20px;
+        font-size: 16px;
     }
 
     .stat-item {
-        margin: 15px;
-        width: 100%;  /* Stat items should fill full width on mobile */
-    }
-
-    .interactive-button {
-        padding: 12px 25px;
-        font-size: 1.2em;
-    }
-
-    #interactive {
-        padding: 40px 15px;
-    }
-
-    footer {
-        padding: 15px;
+        margin: 10px 0;
     }
 }
 
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 0.9em;
-        margin-bottom: 20px;
-    }
-
-    .cta-button {
-        padding: 10px 20px;
-        font-size: 0.9em;
-    }
-
-    .interactive-button {
-        padding: 10px 20px;
-        font-size: 1em;
-    }
-
-    #tokenomics, #interactive {
-        padding: 30px 10px;
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    .social-links a {
-        margin: 0 10px;
-    }
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
 }
