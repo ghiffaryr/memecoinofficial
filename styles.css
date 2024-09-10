@@ -5,6 +5,21 @@
     box-sizing: border-box;
 }
 
+/* General scrollbar styles */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ffffff; /* Dark background for track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ff8800; /* Bright color for the thumb */
+    border-radius: 10px;
+}
+
+
 body {
     font-family: 'Comic Sans MS', sans-serif;
     line-height: 1.6;
