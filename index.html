@@ -3,82 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <title>PEPE</title>
-    <link href="./images/pepeIcon.svg" rel="icon" type="image/svg+xml">
-    <link href="./images/pepeIcon.png" rel="icon" type="image/png">
-    <link href="./images/pepeIcon.ico" rel="icon" type="image/X_icon">
+    <title>MemeCoin - The Ultimate Meme Cryptocurrency</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-            <img src="./images/pepeLogo.webp" alt="pepeLogo">
-            <ul class="navBar">
-                <li><a href="#heroSection">Home</a></li>
-                <li><a href="#howToBuySection">How to buy</a></li>
-                <li><a href="#quoteSection">About</a></li>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <img src="assets/memecoin-logo.png" alt="MemeCoin Logo" class="nav-logo">
+            <ul class="nav-links">
+                <li><a href="#tokenomics">Tokenomics</a></li>
+                <li><a href="#interactive">Earn Memes</a></li>
+                <li><a href="#community">Community</a></li>
             </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero">
+        <div class="container">
+            <img src="assets/memecoin-logo.png" alt="MemeCoin Logo" class="hero-logo">
+            <h1>Welcome to MemeCoin!</h1>
+            <p>The cryptocurrency that's all about fun and memes!</p>
+            <button class="cta-button" onclick="startInteraction()">Get MemeCoin</button>
+        </div>
     </header>
-    <main>
-        <div id="heroSection" >
-            <div class="heroText">
-                <h1>They call me $pepe,</h1>
-                <p>The frog of ETH. The biggest memecoin of 2025.<br>Don't act like you don't know me. </p>
-                <a href="https://app.uniswap.org"><button class="heroButton">Buy now</button></a>
-            </div>
-            <img src="./images/pepemaga.webp" alt="Pepe laughting at other memecoins">
-        </div>
-        
-        <div id="howToBuySection">
-            <h2>How to buy</h2>
-            <div class="figuresContainer">
-                
-                <figure>
-                    <img src="./images/wallet.png.webp" alt="Descriptive text for the image">
-                    <figcaption>Create a wallet</figcaption>
-                </figure>
-                
-                <figure>
-                    <img src="./images/tokens.png.webp" alt="Descriptive text for the image">
-                    <figcaption>Get some eth</figcaption>
-                </figure>
-                
-                <figure>
-                    <img src="./images/uniswap (2).png.webp" alt="Descriptive text for the image">
-                    <figcaption>Go to uniswap.</figcaption>
-                </figure>
-                
-                <figure>
-                    <img src="./images/pepeHeroSection.webp" alt="Descriptive text for the image">
-                    <figcaption>Swap eth for $pepe</figcaption>
-                </figure>
 
+    <!-- Tokenomics Section -->
+    <section id="tokenomics">
+        <h2>Tokenomics</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <h3>Total Supply</h3>
+                <p>1,000,000,000 MEME</p>
+            </div>
+            <div class="stat-item">
+                <h3>Distribution</h3>
+                <p>50% Community | 25% Developers | 25% Staking</p>
             </div>
         </div>
+    </section>
 
-        <div id="quoteSection">
-            <div>
-                <blockquote>$PEPE is a meme coin with no intrinsic value or expectation of financial return. There is no formal team or roadmap.<br>The coin is completely useless and for entertainment purposes only.</blockquote>
-                <p>- Pepe, god of memecoins</p>
-            </div>
+    <!-- Interactive Section -->
+    <section id="interactive">
+        <h2>Earn Memes by Clicking!</h2>
+        <button id="earn-button" class="interactive-button" onclick="clickToEarn()">Click Me!</button>
+        <p id="coin-counter">You've earned 0 MemeCoins</p>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community">
+        <h2>Join the MemeCoin Community</h2>
+        <p>Connect with us on social media and stay updated!</p>
+        <div class="social-links">
+            <a href="https://twitter.com/memecoin" target="_blank">Twitter</a>
+            <a href="https://reddit.com/r/memecoin" target="_blank">Reddit</a>
+            <a href="https://discord.gg/memecoin" target="_blank">Discord</a>
         </div>
+    </section>
 
-        <div id="callToActionSection">
-            <div>
-                <div class="ctaText">
-                    <h3>vibe and hold</h3>
-                    <p>Zero taxes</p>
-                </div>
-                <a href="https://app.uniswap.org"><button>Buy $pepe</button></a> 
-            </div>
-        </div>
-    </main>
-
-        <footer>
-            <p>© 2024 by Pepe. All rights reserved!</p>
-            <a href="https://x.com/pepe" target="_blank">
-                <img src="./images/X_icon.svg.png" alt="X_icon">
-            </a>
-        </footer>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 MemeCoin. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
